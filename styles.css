@@ -77,9 +77,21 @@ span {
   align-items: center;
 }
 
+.flex-column-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .grid-container {
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  column-gap: 1rem;
+  row-gap: 0rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  place-content: center;
+  margin-top: 3rem;
+  text-align: center;
 }
 
 /* NAVBAR SECTION */
@@ -87,7 +99,7 @@ span {
   position: fixed;
   z-index: 100;
   width: 100%;
-  height: 2rem;
+  height: 3rem;
   padding: 0;
   margin: 0;
   border: 0;
@@ -139,8 +151,8 @@ span {
   }
 }
 
-/* RESUME SECTION */
-#resume {
+/* WORK SECTION */
+#work {
   text-align: left;
   padding-left: 30%;
   padding-right: 30%;
@@ -155,12 +167,14 @@ span {
   margin-bottom: 5rem;
 }
 
-/* CONTACT SECTION */
-#contact {
-  text-align: left;
-  padding-left: 30%;
-  padding-right: 30%;
-  margin-bottom: 5rem;
+#certifications img {
+  display: flex;
+  justify-content: center;
+  height: 3.5rem;
+}
+
+#certifications h4 {
+  font-size: 1.4em;
 }
 
 /* LINK ICONS SECTION */
